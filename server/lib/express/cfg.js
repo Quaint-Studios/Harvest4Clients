@@ -1,7 +1,9 @@
+import path from 'path';
+
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-import path from 'path';
+
 import { isProductionMode } from '@utils/ServerEssentials';
 
 const app = express();
