@@ -5,7 +5,7 @@
   "proxy": "http://localhost:8182",
   "scripts": {
     "server": "node server/dist/server.main",
-    "start": "concurrently \"nodemon --exec babel-node lib/server/server.main\" \"craco start\"",
+    "start": "concurrently \"nodemon --exec babel-node server/lib/server.main\" \"craco start\"",
     "build": "concurrently \"craco build\" \"babel server/lib -d server/dist --delete-dir-on-start --copy-files\"",
     "test": "craco test",
     "eject": "craco eject"
