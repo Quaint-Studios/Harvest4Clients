@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "server": "node server/dist/server.main",
     "start": "craco start",
     "build": "concurrently \"craco build\" \"babel server/lib -d server/dist --copy-files\"",
     "test": "craco test",
