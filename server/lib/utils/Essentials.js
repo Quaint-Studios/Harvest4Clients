@@ -7,3 +7,11 @@ export function debug(data, bypass = false) {
     console.log(timestamp(data)); // NOTE Keep
   }
 }
+
+/**
+ * Wraps some data in a timestamp.
+ */
+export function timestamp(data) {
+  const now = new Date().toLocaleString('en-US');
+  return `[${now}]: ${data}`;
+}
