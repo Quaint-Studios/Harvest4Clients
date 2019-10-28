@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "server": "node server/dist/server.main",
-    "start": "craco start",
+    "start": "concurrently \"nodemon --exec babel-node lib/server/server.main\" \"craco start\"",
     "build": "concurrently \"craco build\" \"babel server/lib -d server/dist --copy-files\"",
     "test": "craco test",
     "eject": "craco eject"
@@ -40,6 +40,7 @@
     "@craco/craco": "^5.5.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "concurrently": "^5.0.0",
-    "craco-alias": "^1.0.4"
+    "craco-alias": "^1.0.4",
+    "nodemon": "^1.19.4"
   }
 }
