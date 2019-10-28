@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8182",
   "scripts": {
-    "server": "node server/dist/server.main",
+    "server": "node server/dist/server.main node_env=production",
     "start": "concurrently \"nodemon --exec babel-node server/lib/server.main\" \"craco start\"",
     "build": "concurrently \"craco build\" \"babel server/lib -d server/dist --delete-dir-on-start --copy-files\"",
     "test": "craco test",
