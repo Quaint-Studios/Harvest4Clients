@@ -11,6 +11,7 @@
 # production
 /build
 /server/dist
+.config/acme
 
 # misc
 .DS_Store
