@@ -26,7 +26,7 @@ const greenlockOptions = {
   // simply export it as-is, then include it here
   app
 
-  //, debug: true
+  // , debug: true
 };
 
 const server = isProductionMode() ? greenlock.create(greenlockOptions).listen(80, 443) : http.createServer(app).listen(PORT);
@@ -34,5 +34,5 @@ const server = isProductionMode() ? greenlock.create(greenlockOptions).listen(80
 export const listener = server;
 
 PublicIP.v4().then((ip) => {
-  debug(`Listening on ${isProductionMode() ? 'https://' : 'http://'}${process.env.HIDDEN ? "127.0.0.1" : ip}:${isProductionMode() ? 443 : PORT}`);
+  debug(`Listening on ${isProductionMode() ? 'https://' : 'http://'}${process.env.HIDDEN ? '127.0.0.1' : ip}:${isProductionMode() ? 443 : PORT}`);
 });
