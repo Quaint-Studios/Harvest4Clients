@@ -1,0 +1,15 @@
+/* .babelrc configuration for the ./server/lib directory */
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./server/lib"],
+      "alias": {
+        "@root": "./",
+        "@express": "./express",
+        "@utils": "./utils"
+      }
+    }]
+  ],
+  "ignore": []
+}
