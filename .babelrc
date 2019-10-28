@@ -6,8 +6,8 @@
       "root": ["./server/lib"],
       "alias": {
         "@root": "./",
-        "@express": "./express",
-        "@utils": "./utils"
+        "@express": "./server/lib/express",
+        "@utils": "./server/lib/utils"
       }
     }]
   ],
